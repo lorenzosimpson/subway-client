@@ -6,12 +6,13 @@ import Icon from '@material-ui/core/Icon';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import ClearIcon from '@material-ui/icons/Clear';
 import Button from '@material-ui/core/Button';
+import { theme } from '../muiTheme';
 
 const useStyles = makeStyles(theme => ({
     root: {
       '& > *': {
         margin: theme.spacing(1),
-        width: '35ch',
+        width: '100%',
       },
       display: 'flex',
       alignItems: 'center',
@@ -19,7 +20,12 @@ const useStyles = makeStyles(theme => ({
       fontSize: '16px'
     },
     button: {
-        width: 320
+        width: '100%',
+        background: 'green',
+        color: 'white'
+    },
+    buttonClear: {
+        width: '100%',
     }
   }));
 
@@ -126,7 +132,6 @@ function Form(props) {
         <Button
             variant="contained"
             type='submit'
-            color="primary"
             className={classes.button}
             startIcon={<DirectionsIcon />}
             >Route</Button>
@@ -134,8 +139,8 @@ function Form(props) {
         <Button
             variant="outlined"
             type='reset'
-            color="primary"
-            className={classes.button}
+            id='clear'
+            className={classes.buttonClear}
             startIcon={<ClearIcon />}
             >Clear</Button>
         

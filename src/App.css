@@ -17,12 +17,14 @@
   color: rgb(137, 184, 242);
   font-size: 4rem;
 }
+
 .route-path {
   display: flex;
   flex-direction: column;
   margin-left: 10%;
   font-size: 1.5rem;
 }
+
 #depart-arrive {
   margin-top: 0;
   margin-bottom: 0;
