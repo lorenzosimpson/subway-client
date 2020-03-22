@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
-      fontSize: '16px'
     },
     button: {
         width: '100%',
@@ -27,9 +26,6 @@ const useStyles = makeStyles(theme => ({
     buttonClear: {
         width: '100%',
     },
-    textField: {
-        fontSize: '24px'
-    }
   }));
 
 function Form(props) {
