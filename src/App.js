@@ -6,6 +6,24 @@ import Form from './components/Form';
 import RoutePath from './components/RoutePath';
 import Axios from 'axios';
 
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#2e7d32',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#c62828',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
+  },
+});
+
 function App() {
   const [route, setRoute] = useState([])
   const [transfers, setTransfers] = useState('')
@@ -20,6 +38,7 @@ function App() {
   }, [])
 
   return (
+    <MuiThemeProvider theme={theme}>
     <div className="App">
       <div className='main-container'>
         <Nav />
@@ -29,6 +48,7 @@ function App() {
         </div>
       </div>
     </div>
+    </MuiThemeProvider>
   );
 }
 

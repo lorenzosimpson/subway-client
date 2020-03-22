@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
       '& > *': {
         margin: theme.spacing(1),
         width: '100%',
+
       },
       display: 'flex',
       alignItems: 'center',
@@ -20,11 +21,14 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         width: '100%',
-        background: 'green',
+        height: '50px',
+        fontSize: '1.2rem',
         color: 'white'
     },
     buttonClear: {
         width: '100%',
+        height: '50px',
+        fontSize: '1.2rem',
     },
   }));
 
@@ -91,7 +95,8 @@ function Form(props) {
         >
             <TextField id='origin'
             label="Origin" 
-            variant="outlined" 
+            color='primary'
+            variant="filled"
             name='originSearchTerm'
             onChange={handleOriginChange}
             ></TextField>
@@ -111,8 +116,9 @@ function Form(props) {
 
             <TextField id='destination'
             label="Destination"
-            variant="outlined" 
+            variant="filled" 
             name='destination'
+            color='secondary'
             onChange={handleDestinationChange}
             ></TextField>
             <div>
@@ -131,6 +137,7 @@ function Form(props) {
         <Button
             variant="contained"
             type='submit'
+            color='primary'
             className={classes.button}
             startIcon={<DirectionsIcon />}
             >Route</Button>
