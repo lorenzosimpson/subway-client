@@ -11,14 +11,15 @@ const useStyles = makeStyles(theme => ({
     root: {
       '& > *': {
         margin: theme.spacing(1),
-        width: '45ch',
+        width: '35ch',
       },
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
+      fontSize: '16px'
     },
     button: {
-        width: 250
+        width: 320
     }
   }));
 

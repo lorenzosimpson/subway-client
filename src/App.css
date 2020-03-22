@@ -13,14 +13,28 @@
   flex-direction: column;
   margin-top: 30px;
 }
-
+#subway {
+  color: rgb(137, 184, 242);
+  font-size: 4rem;
+}
 .route-path {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 10%;
+  font-size: 1.5rem;
 }
-
+#depart-arrive {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .selection {
   cursor: pointer;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+  padding: 2% 0 2% 2%;
 }
 
+.result-station {
+  display: flex;
+  align-items: center;
+}
