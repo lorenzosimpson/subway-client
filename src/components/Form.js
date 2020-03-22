@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     },
     buttonClear: {
         width: '100%',
+    },
+    textField: {
+        fontSize: '24px'
     }
   }));
 
@@ -111,7 +114,7 @@ function Form(props) {
             </div>
 
             <TextField id='destination'
-            label="Destination" 
+            label="Destination"
             variant="outlined" 
             name='destination'
             onChange={handleDestinationChange}

@@ -1,3 +1,6 @@
+.App {
+  font-size: 16px;
+}
 .main-container {
   margin-right: 3%;
   margin-left: 3%;
@@ -39,4 +42,8 @@
 .result-station {
   display: flex;
   align-items: center;
+}
+
+#origin, #destination {
+  font-size: 1.3rem;
 }
