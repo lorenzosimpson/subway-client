@@ -39,15 +39,15 @@ function App() {
 
   return (
     <MuiThemeProvider theme={theme}>
-    <div className="App">
-      <div className='main-container'>
-        <Nav />
-        <div className='content'>
-          <Form setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>
-          <RoutePath route={route} transfers={transfers} />
+      <div className="App">
+        <div className='main-container'>
+          <Nav />
+          <div className='content'>
+            <Form setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>
+            <RoutePath route={route} transfers={transfers} />
+          </div>
         </div>
       </div>
-    </div>
     </MuiThemeProvider>
   );
 }

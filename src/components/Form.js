@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import ClearIcon from '@material-ui/icons/Clear';
 import Button from '@material-ui/core/Button';
-import { theme } from '../muiTheme';
 
 const useStyles = makeStyles(theme => ({
     root: {
