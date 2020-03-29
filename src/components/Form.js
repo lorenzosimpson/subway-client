@@ -32,8 +32,6 @@ const useStyles = makeStyles(theme => ({
 
 function Form(props) {
     const [request, setRequest] = useState()
-    const [origin, setOrigin] = useState('')
-    const [destination, setDestination] = useState('')
     const { setRoute, setTransfers, stations } = props;
     const [originSearchTerm, setOriginSearchTerm] = useState('')
     const [destinationSearchTerm, setDestinationSearchTerm] = useState('')
@@ -55,13 +53,13 @@ function Form(props) {
         setOriginResults(
             !originSearchTerm.length ? [] : stations.filter(s => s.toLowerCase().includes(originSearchTerm.toLowerCase()))
         )
-    }, [originSearchTerm])
+    }, [stations, originSearchTerm])
 
     useEffect(() => {
         setDestinationResults(
             !destinationSearchTerm.length ? [] : stations.filter(s => s.toLowerCase().includes(destinationSearchTerm.toLowerCase()))
         )
-    }, [destinationSearchTerm])
+    }, [stations, destinationSearchTerm])
 
 
     const handleSubmit = async(e) => {

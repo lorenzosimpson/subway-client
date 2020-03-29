@@ -1,18 +1,55 @@
 .App {
   font-size: 16px;
+  margin: 0 auto;
 }
 .main-container {
-  margin-right: 3%;
-  margin-left: 3%;
+  margin: 0 auto;
 }
+
+.content-container {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#main-head {
+  font-weight: 400;
+  font-size: 44px;
+}
+
+#sub-head {
+  font-size: 32px;
+}
+
+
 
 input {
   font-size: 16px !important;
 }
 
 .nav {
-  margin-top: 10px;
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 3% 0 3%;
 }
+
+#buddy {
+  font-weight: bold;
+}
+
 
 .content {
   display: flex;

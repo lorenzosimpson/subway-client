@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './components/Nav'
 import Form from './components/Form';
 import RoutePath from './components/RoutePath';
+import Landing from './components/Landing';
 import Axios from 'axios';
 
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
@@ -41,10 +42,13 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <div className="App">
         <div className='main-container'>
-          <Nav />
-          <div className='content'>
-            <Form setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>
-            <RoutePath route={route} transfers={transfers} />
+        <Nav />
+          <div className='content-container'>
+            <Landing />
+            <div className='content'>
+              <Form setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>
+              <RoutePath route={route} transfers={transfers} />
+            </div>
           </div>
         </div>
       </div>

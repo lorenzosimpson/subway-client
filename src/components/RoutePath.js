@@ -9,10 +9,10 @@ function RoutePath(props) {
                 route.map(station => (
                     <>
                         
-                        {station == route[0] && 
+                        {station === route[0] && 
                         <h4 id='depart-arrive'>Depart</h4>
                         }
-                        {station == route[route.length -1] &&
+                        {station === route[route.length -1] &&
                         <h4 id='depart-arrive'>Arrive</h4>
                         }
                         <div className='result-station'><span class="material-icons" id='subway'>
