@@ -1,10 +1,11 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 function Nav(props) {
     return (
         <div className='nav'>
-            <Typography variant='h4'>transfer<span id='buddy'>Buddy</span></Typography>
+            <Link className='logo' to='/'>transfer<span id='buddy'>Buddy</span></Link>
         </div>
     );
 }

@@ -2,36 +2,57 @@
   font-size: 16px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .main-container {
   margin: 0 auto;
 }
 
 .content-container {
   width: 88%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .landing {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 #main-img {
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
+  min-width: 300px;
+}
+
+.attr {
+  color: lightgray;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 #main-head {
   font-weight: 400;
-  font-size: 44px;
+  font-size: 4rem;
+  font-weight: lighter;
 }
 
 #sub-head {
-  font-size: 32px;
+  font-size: 2.6rem;
+  max-width: 79%;
+  font-weight: lighter;
 }
 
+#go-btn {
+  width: 80%;
+  height: 40px;
+}
 
 
 input {
@@ -46,6 +67,9 @@ input {
   padding: 0 3% 0 3%;
 }
 
+.logo {
+  font-size: 2rem;
+}
 #buddy {
   font-weight: bold;
 }
@@ -55,23 +79,25 @@ input {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 30px;
 }
 #subway {
   color: rgb(137, 184, 242);
   font-size: 4rem;
+  width: auto;
 }
 
 .route-path {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  align-items: stretch;
 }
 
 #depart-arrive {
   margin-top: 0;
+  font-size: 2rem;
   margin-bottom: 0;
+  padding: 10px 0 10px 0;
 }
 .selection {
   cursor: pointer;
@@ -83,10 +109,34 @@ input {
 .result-station {
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
+}
+
+#transfers {
+  align-self: flex-end;
+  font-size: 2rem;
+}
+
+.transfer-flag {
+  margin-left: 5px;
+  color: lightcoral;
+}
+
+.depart-transfer-blk {
+  display: flex;
+align-items: center;
+justify-content: space-between;
+font-weight: bold;
 }
 
 #origin, #destination {
   font-size: 1.3rem;
+}
+
+
+#arrow {
+  width: 24px;
+  margin-left: 7px;
 }
 
 @media screen and (min-width: 800px) {
@@ -94,6 +144,9 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #go-btn {
+    width: 10%;
   }
   form {
     width: 50%;

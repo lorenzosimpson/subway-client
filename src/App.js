@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import {Route, Link} from 'react-router-dom';
+
 import Nav from './components/Nav'
 import Form from './components/Form';
 import RoutePath from './components/RoutePath';
@@ -44,10 +46,10 @@ function App() {
         <div className='main-container'>
         <Nav />
           <div className='content-container'>
-            <Landing />
+            <Route exact path='/' component={Landing} />
             <div className='content'>
-              <Form setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>
-              <RoutePath route={route} transfers={transfers} />
+              <Route exact path='/route' render={props => <Form {...props} setRoute={setRoute} setTransfers={setTransfers} stations={stations}/>} />
+              <Route exact path='/route' render={props => <RoutePath {...props} route={route} transfers={transfers} /> } />
             </div>
           </div>
         </div>

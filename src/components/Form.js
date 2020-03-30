@@ -9,9 +9,8 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
     root: {
       '& > *': {
-        margin: theme.spacing(1),
+        margin: theme.spacing(0.5),
         width: '100%',
-
       },
       display: 'flex',
       alignItems: 'center',
@@ -86,13 +85,13 @@ function Form(props) {
     
     return (
         <>
-        <form className={classes.root}
+        <form id='navigate' className={classes.root}
         onSubmit={handleSubmit}
         >
             <TextField id='origin'
             label="Origin" 
             color='primary'
-            variant="filled"
+            variant="standard"
             name='originSearchTerm'
             onChange={handleOriginChange}
             ></TextField>
@@ -112,7 +111,7 @@ function Form(props) {
 
             <TextField id='destination'
             label="Destination"
-            variant="filled" 
+            variant="standard" 
             name='destination'
             color='secondary'
             onChange={handleDestinationChange}
