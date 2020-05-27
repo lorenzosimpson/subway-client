@@ -54,6 +54,11 @@ a {
   height: 40px;
 }
 
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 1em;
+}
 
 input {
   font-size: 16px !important;
@@ -133,7 +138,6 @@ font-weight: bold;
   font-size: 1.3rem;
 }
 
-
 #arrow {
   width: 24px;
   margin-left: 7px;
@@ -145,12 +149,11 @@ font-weight: bold;
     justify-content: center;
     align-items: center;
   }
+
   #go-btn {
     width: 10%;
   }
-  form {
-    width: 50%;
-  }
+
   .route-path {
     margin-left: 0;
     width: 50%;

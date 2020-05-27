@@ -40,12 +40,10 @@ function Form(props) {
     
     const handleOriginChange = e => {
         setOriginSearchTerm(`${e.target.value}`)
-        console.log(originSearchTerm)
     }
 
     const handleDestinationChange = e => {
         setDestinationSearchTerm(`${e.target.value}`)
-        console.log(destinationSearchTerm)
     }
     
     useEffect(() => {
@@ -66,7 +64,6 @@ function Form(props) {
         setRequest({
             ...request
         })
-        console.log(request)
         try {
             const res = await Axios.post('https://subway-graph-api-heroku.herokuapp.com/route', request)
             console.log(res.data)
@@ -91,7 +88,7 @@ function Form(props) {
             <TextField id='origin'
             label="Origin" 
             color='primary'
-            variant="standard"
+            variant="outlined"
             name='originSearchTerm'
             onChange={handleOriginChange}
             ></TextField>
@@ -111,7 +108,7 @@ function Form(props) {
 
             <TextField id='destination'
             label="Destination"
-            variant="standard" 
+            variant="outlined" 
             name='destination'
             color='secondary'
             onChange={handleDestinationChange}
